@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block content %}
+  <!-- <h1 class="text-3xl text-white font-bold underline">
+    Hello world!
+  </h1> -->
+  <div class="py-20 text-center space-y-12">
+    <h1 class="text-7xl text-slate-300 font-bold">Get Paid For Your Work</h1>
+
+    <a href="#" class="py-8 px-12 inline-block text-xl text-white bg-sky-800 rounded-lg">Create Page</a>
+  </div>
+
+  <div class="py-12 bg-slate-800">
+    <h2 class="mb-12 text-5xl text-slate-300 text-center font-bold">Newest Creators</h2>
+
+    <div class="px-12 grid grid-cols-4 gap-8">
+      <div class="py-6 px-8 space-y-6">
+        <h3 class="text-xl text-slate-200 font-bold">John Dog</h3>
+
+        <p class="text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, mollitia?</p>
+
+        <a href="#" class="py-4 px-6 inline-block text-xl text-white bg-sky-800 rounded-xl">Read More</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>{% block title %}{% endblock %} | Buy_Me_A_Noodle</title>
+</head>
+<body class="bg-slate-700">
+    <nav class="py-8 px-8 bg-slate-900 flex flex-row items-center justify-between">
+      <div>
+        <a href="{% url 'core:index' %}" class="text-2xl text-cyan-500 font-bold">Buy Me A Noodle</a>
+      </div>
+
+      <div class="space-x-6"> 
+        <a href="{% url 'creator:creators' %}" class="py-4 px-6 text-lg text-cyan-500 font-bold">Creators</a>
+        {% if not request.user.is_authenticated %}
+          <a href="{% url 'creator:login' %}" class="py-4 px-6 text-lg bg-sky-600 hover:bg-sky-700 rounded-xl text-white font-bold">Log In</a>
+          <a href="{% url 'creator:signup' %}" class="py-4 px-6 bg-gray-600 hover:bg-gray-700 rounded-xl text-lg text-white font-bold">Sign Up</a>
+        {% endif %}
+      </div>
+    </nav>
+    <mainc class="py-6 px-8">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="px-8 py-6 text-center bg-slate-600">
+      <p class="text-slate-200">Copyright (c) 2024 - Buy Me A Noodle</p>
+    </footer>
+</body>
+</html>
