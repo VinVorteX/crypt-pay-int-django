@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*b=x8&fsodr_(ddufb)lu-aghl-x@*5%y*1et1*$w=^)qo)ib#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['crypt-pay-int-django.onrender.com']
+ALLOWED_HOSTS = ['crypt-pay-int-django.onrender.com', '127.0.0.1']
 
 LOGIN_URL = 'creator:login'
 

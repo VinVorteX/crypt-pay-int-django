@@ -20,13 +20,21 @@
     <h2 class="mb-12 text-5xl text-slate-300 text-center font-bold">Newest Creators</h2>
 
     <div class="px-12 grid grid-cols-4 gap-8">
-      <div class="py-6 px-8 space-y-6">
-        <h3 class="text-xl text-slate-200 font-bold">John Dog</h3>
+      {% for creator in creators %}
+        <div class="bg-slate-600 rounded-lg">
+            <figure>
+                <img src="{{ creator.image.url }}" class="rounded-tr-lg rounded-tl-lg" alt="">
+            </figure>
 
-        <p class="text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, mollitia?</p>
+            <div class="py-6 px-8 space-y-6">
+                <h3 class="text-xl text-slate-200 font-bold">{{ creator.title }}</h3>
 
-        <a href="#" class="py-4 px-6 inline-block text-xl text-white bg-sky-800 rounded-xl">Read More</a>
-      </div>
+                <p class="text-slate-300">{{ creator.description }}</p>
+
+                <a href="#" class="py-4 px-6 inline-block text-xl text-white bg-sky-800 rounded-xl">Read More</a>
+            </div>
+        </div>
+    {% endfor %}
     </div>
   </div>
 {% endblock %}
